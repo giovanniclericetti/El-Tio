@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="icon" type="image/png" href="Inizio/icona.png">
+
+  <link rel="stylesheet" type="text/css" href="slideshow/Slideshowstile.css ">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  <title>El Tio</title>
+
+</head>
+
+<body>
+  <style>
+    body {
+      background-color: #1d1d1d;
+      background-image: url(Inizio/sfondo.png);
+      background-repeat: repeat;
+    }
+
+    .pos-absolute {
+      position: absolute;
+    }
+
+    .shadow,
+    #phaser-container canvas {
+      box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+    }
+
+    #box>a {}
+
+    #box a:hover>.hide-on-hover,
+    #box a>.show-on-hover {
+      display: none;
+    }
+
+    #box a:hover>.show-on-hover,
+    #box a>.hide-on-hover {
+      display: block;
+    }
+  </style>
+  <div class="container">
+    <!-- Contenuto -->
+    <div id="box">
+
+      <div class="Immagineslide fade ">
+        <img src="slideshow/testo1.png" class="shadow" style="width:100%">
+      </div>
+
+      <div class="Immagineslide fade">
+        <img src="slideshow/scena1.png" class="shadow" style="width:100%">
+      </div>
+
+      <div class="Immagineslide fade">
+        <img src="slideshow/testo2.png" class="shadow" style="width:100%">
+      </div>
+
+      <div class="Immagineslide fade">
+        <img src="slideshow/scena2.png" class="shadow" style="width:100%">
+      </div>
+
+      <div class="Immagineslide fade">
+        <img src="slideshow/testo3.png" class="shadow" style="width:100%">
+      </div>
+
+      <div class="Immagineslide fade">
+        <img src="slideshow/scena3.png" class="shadow" style="width:100%">
+      </div>
+
+      <div class="Immagineslide fade">
+        <img src="slideshow/testo4.png" class="shadow" style="width:100%">
+      </div>
+
+      <div class="Immagineslide fade">
+        <img src="slideshow/scena4.png" class="shadow" style="width:100%">
+      </div>
+
+      <div class="Immagineslide fade" style="position:relative;">
+        <img src="slideshow/testo5.png" class="shadow" style="width:100%" />
+
+        <a id="avanti" href="gioco.html">
+          <img src="slideshow/avantib.png" class="hide-on-hover" />
+          <img src="slideshow/avantir.png" class="show-on-hover" />
+        </a>
+
+        <a id="indietros" href="index.html">
+          <img src="slideshow/indietrob.png" class="hide-on-hover" />
+          <img src="slideshow/indietror.png" class="show-on-hover" />
+        </a>
+      </div>
+
+      <!-- Bottoni Destra e Sinistra -->
+      <a class="Sinistra" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="Destra" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Javascript -->
+    <script>
+      var Indice = 1;
+      showSlides(Indice);
+
+      // Avanti_indietro
+      function plusSlides(n) {
+        showSlides(Indice += n);
+      }
+
+      function showSlides(n) {
+        var ok;
+        var immagine = document.getElementsByClassName("Immagineslide");
+        if (n > immagine.length) {
+          Indice = 1
+        }
+        if (n < 1) {
+          Indice = immagine.length
+        }
+        for (ok = 0; ok < immagine.length; ok++) {
+          immagine[ok].style.display = "none";
+        }
+
+        immagine[Indice - 1].style.display = "block";
+      }
+    </script>
+</body>
+
+</html>
