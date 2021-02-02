@@ -193,9 +193,6 @@ function preload() {
   game.load.image('tornaalteatro', 'Assets/tornalteatro.png');
   game.load.image('vecio1', 'Assets/vecio1.png');
 
-  game.load.image('db1', 'Assets/db1.png');
-  game.load.image('db2', 'Assets/db2.png');
-
   game.load.spritesheet('venditore1', 'Assets/vendor.png', 88, 156);
   game.load.spritesheet('vendor2', 'Assets/vendor2_ALL.png', 104, 176);
   game.load.spritesheet('vecio', 'Assets/vecio.png', 128, 132);
